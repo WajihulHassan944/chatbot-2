@@ -1,6 +1,9 @@
 const form = document.getElementById("chat-form");
 const input = document.getElementById("chat-input");
 const messages = document.getElementById("chat-messages");
+
+const dotenv = require('dotenv');
+dotenv.config();
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const message = input.value;
@@ -34,3 +37,4 @@ form.addEventListener("submit", async (e) => {
   <img src="./icons/chatbot.png" alt="bot icon"> <span>${chatbotResponse}</span>
   </div>`;
 });
+
